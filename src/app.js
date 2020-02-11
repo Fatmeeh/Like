@@ -1,11 +1,12 @@
-const express = require("express");
-const cors = require("cors");
-const morgan = require("morgan");
-const compression = require("compression");
-const fs = require("fs");
-const path = require("path");
-const helmet = require("helmet");
-const exphbs = require("express-handlebars")
+const express = require('express');
+const cors = require('cors');
+const morgan = require('morgan');
+const compression = require('compression');
+const fs = require('fs');
+const path = require('path');
+const helmet = require('helmet');
+const bodyParser = require('body-parser');
+const exphbs = require('express-handlebars');
 const routes = require('./routes/index');
 const helpers = require('./views/helpers/index');
 
@@ -17,13 +18,15 @@ app.use(compression()); //make requests lighter and load faster
 
 // create a write stream in append mode
 const accessLogStream = fs.createWriteStream(
-  path.join(__dirname, "..", "logs", "access.log"),
-  { flag: "a" }
+  path.join(__dirname, '..', 'logs', 'access.log'),
+  { flag: 'a' }
 );
 // setup morgan logger in 'combined' and stream data to the write stream
-app.use(morgan("combined", { stream: accessLogStream }));
+app.use(morgan('combined', { stream: accessLogStream }));
 
-
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'style')));
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
@@ -34,7 +37,7 @@ app.engine(
     layoutsDir: path.join(__dirname, 'views', 'layouts'),
     partialsDir: path.join(__dirname, 'views', 'partials'),
     defaultLayout: 'main',
-    helpers,
+    helpers
   })
 );
 
