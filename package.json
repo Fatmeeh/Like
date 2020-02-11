@@ -1,0 +1,31 @@
+{
+  "name": "like",
+  "version": "1.0.0",
+  "description": "Like is a website that have a pictures category that you can choose then like a pic and make it go to your favorite collection in your profile",
+  "main": "index.js",
+  "scripts": {
+    "autostart": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "db_test": "set NODE_ENV=test&& nodemon tests/db_tests.js",
+    "routers_test": "nodemon tests/routers_test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FACN8/Like.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FACN8/Like/issues"
+  },
+  "homepage": "https://github.com/FACN8/Like#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "pg": "^7.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
