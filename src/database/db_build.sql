@@ -20,7 +20,6 @@ VALUES
 ('seat',' https://www.seat.co.il/wp-content/uploads/2019/01/leon-cupra-nevada-white.png','Cars'),
 ('golf gti','https://drivetribe.imgix.net/TWuedmhLRCqwz4HfAK7cqg?w=1400&h=788&fm=webp&auto=compress&lossless=true&fit=crop&crop=faces','Cars'),
 ('mazda',' https://i0.wp.com/toyotamazda.com/wp-content/uploads/2017/11/2020-Mazda-6-New-Generation-based-on-Shinari-Concept-side-view.jpg?resize=640%2C400&ssl=1','Cars'), 
-
 ('Deer','https://data.whicdn.com/images/161813205/original.jpg','Animals'),
 ('cat','https://data.whicdn.com/images/339884135/original.jpg','Animals'),
 ('horse','https://data.whicdn.com/images/166261080/original.jpg','Animals'),
@@ -30,7 +29,6 @@ VALUES
 ('banda','https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQdRGHzqNlqdKVe8xTLFsNflTXuWwVKJEtzG7OctNnHXsh38xIn','Animals'),
 ('parrot','https://images2.minutemediacdn.com/image/upload/c_crop,h_1657,w_2950,x_0,y_158/f_auto,q_auto,w_1100/v1554746001/shape/mentalfloss/88127-istock-611617612.jpg','Animals'),
 ('tiger','https://i1.wp.com/www.onfocus.news/wp-content/uploads/2019/03/white-tiger.gif?fit=1280%2C730&ssl=1','Animals'),
-
 ('rose','https://upload.wikimedia.org/wikipedia/commons/5/51/Small_Red_Rose.JPG','flowers');
 ('tulip','https://cf.shopee.com.my/file/5141661d01a1be0c282796d4d63f7440','flowers');
 ('lavender','https://cdn.shopify.com/s/files/1/0022/4847/4713/products/MG_9602_2d83c59b-1c91-4ee8-83cb-c01ba5ff1a5f_700x.jpg?v=1575027393','flowers');
@@ -47,14 +45,15 @@ CREATE TABLE IF NOT EXISTS users (
     user_id SERIAL PRIMARY KEY,
     user_name VARCHAR(255) NOT NULL,
     user_pass VARCHAR(255) NOT NULL,
-    user_img VARCHAR(255) NOT NULL
+    user_img VARCHAR(255) NOT NULL,
+    user_status VARCHAR(255) NOT NULL
 );
 
 INSERT INTO users(user_name,user_pass,user_img) 
 VALUES
-('francis','123Francis','https://i.ytimg.com/vi/JlxU9mAPnMg/hqdefault.jpg'),
-('fatmeeh','123Fatmeeh','https://i.ytimg.com/vi/JlxU9mAPnMg/hqdefault.jpg'),
-('mahmod','123Mahmod','https://i.ytimg.com/vi/JlxU9mAPnMg/hqdefault.jpg');
+('francis','123Francis','https://i.ytimg.com/vi/JlxU9mAPnMg/hqdefault.jpg','Travel to life is like css to html'),
+('fatmeeh','123Fatmeeh','https://i.ytimg.com/vi/JlxU9mAPnMg/hqdefault.jpg','HTTP 404: Status not Found'),
+('mahmod','123Mahmod','https://i.ytimg.com/vi/JlxU9mAPnMg/hqdefault.jpg','Do not be afraid to step on people. Mario made a career from it');
 
 CREATE TABLE IF NOT EXISTS liked_pic (
     like_id SERIAL PRIMARY KEY,
