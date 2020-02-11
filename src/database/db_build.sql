@@ -6,10 +6,10 @@ CREATE TABLE IF NOT EXISTS images (
     img_id SERIAL PRIMARY KEY,
     img_info VARCHAR(255) NOT NULL,
     img_url VARCHAR(255) NOT NULL,
-    img_catagory VARCHAR(255) NOT NULL
+    img_category VARCHAR(255) NOT NULL
 );
 
-INSERT INTO images(img_info,img_url,img_catagory) 
+INSERT INTO images(img_info,img_url,img_category) 
 VALUES
 ('BMW','https://i.ytimg.com/vi/JlxU9mAPnMg/hqdefault.jpg','Cars'),
 ('Dog','https://i.ytimg.com/vi/JlxU9mAPnMg/hqdefault.jpg','Animals'),
