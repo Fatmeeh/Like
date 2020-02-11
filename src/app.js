@@ -26,7 +26,7 @@ app.use(morgan('combined', { stream: accessLogStream }));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'style')));
+app.use(express.static(path.join(__dirname,'..','public'),{maxAge:'30d'}));
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
