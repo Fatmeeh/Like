@@ -21,8 +21,26 @@ VALUES
 ('golf gti','https://drivetribe.imgix.net/TWuedmhLRCqwz4HfAK7cqg?w=1400&h=788&fm=webp&auto=compress&lossless=true&fit=crop&crop=faces','Cars'),
 ('mazda',' https://i0.wp.com/toyotamazda.com/wp-content/uploads/2017/11/2020-Mazda-6-New-Generation-based-on-Shinari-Concept-side-view.jpg?resize=640%2C400&ssl=1','Cars'), 
 
-('Dog','https://i.ytimg.com/vi/JlxU9mAPnMg/hqdefault.jpg','Animals'),
-('Dog','https://i.ytimg.com/vi/JlxU9mAPnMg/hqdefault.jpg','flowers');
+('Deer','https://data.whicdn.com/images/161813205/original.jpg','Animals'),
+('cat','https://data.whicdn.com/images/339884135/original.jpg','Animals'),
+('horse','https://data.whicdn.com/images/166261080/original.jpg','Animals'),
+('duck','https://data.whicdn.com/images/65662130/original.jpg','Animals'),
+('Dove','https://data.whicdn.com/images/203209610/original.jpg','Animals'),
+('fox','https://images.unsplash.com/photo-1474511320723-9a56873867b5?ixlib=rb-1.2.1&w=1000&q=80','Animals'),
+('banda','https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQdRGHzqNlqdKVe8xTLFsNflTXuWwVKJEtzG7OctNnHXsh38xIn','Animals'),
+('parrot','https://images2.minutemediacdn.com/image/upload/c_crop,h_1657,w_2950,x_0,y_158/f_auto,q_auto,w_1100/v1554746001/shape/mentalfloss/88127-istock-611617612.jpg','Animals'),
+('tiger','https://i1.wp.com/www.onfocus.news/wp-content/uploads/2019/03/white-tiger.gif?fit=1280%2C730&ssl=1','Animals'),
+
+('rose','https://upload.wikimedia.org/wikipedia/commons/5/51/Small_Red_Rose.JPG','flowers');
+('tulip','https://cf.shopee.com.my/file/5141661d01a1be0c282796d4d63f7440','flowers');
+('lavender','https://cdn.shopify.com/s/files/1/0022/4847/4713/products/MG_9602_2d83c59b-1c91-4ee8-83cb-c01ba5ff1a5f_700x.jpg?v=1575027393','flowers');
+('juwel','https://www.lubera.co.uk/media/image/thumbnail/2274157_1_720x600.jpg','flowers');
+('Anemone','https://upload.wikimedia.org/wikipedia/commons/d/da/Wood_anemone_flowers.jpg','flowers');
+('Astrantia','https://upload.wikimedia.org/wikipedia/commons/2/2d/Astrantia_%28Masterwort_Plant%29.jpg','flowers');
+('Calla Lily','https://images-na.ssl-images-amazon.com/images/I/41Ni%2Bvl9fxL._AC_.jpg','flowers');
+('Cranesbill Geranium','https://upload.wikimedia.org/wikipedia/commons/6/62/Geranium_macrorrhizum_stempel_gespleten.jpg','flowers');
+('Wax Plant','https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSZSld8M7bWNV1ktrcV4tXkG-9Bfb4Hh0fonTByj5Ei_0gaFFpb','flowers');
+
 
 
 CREATE TABLE IF NOT EXISTS users (
