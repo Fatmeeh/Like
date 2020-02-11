@@ -1,6 +1,6 @@
 const express = require('express');
 
-const userListFromDatabase = require('./../model');
+const models = require('./../models');
 
 const router = express.Router();
 router.get('/', (req, res) => {
