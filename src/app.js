@@ -7,9 +7,8 @@ const path = require('path');
 const helmet = require('helmet');
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
-const routes = require('./routes/index');
+const routes = require('./controllers/index.js');
 const helpers = require('./views/helpers/index');
-
 const app = express();
 
 app.use(helmet()); // protect the f**king server
@@ -26,7 +25,9 @@ app.use(morgan('combined', { stream: accessLogStream }));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname,'..','public'),{maxAge:'30d'}));
+app.use(
+  express.static(path.join(__dirname, '..', 'public'), { maxAge: '30d' })
+);
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
