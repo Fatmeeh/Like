@@ -7,7 +7,8 @@
     "autostart": "nodemon src/index.js",
     "start": "node src/index.js",
     "db_test": "set NODE_ENV=test&& nodemon tests/db_tests.js",
-    "routers_test": "nodemon tests/routers_test.js"
+    "routers_test": "nodemon tests/routers_test.js",
+    "build:db": "node src/database/db_build.js"
   },
   "repository": {
     "type": "git",
