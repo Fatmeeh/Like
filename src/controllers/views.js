@@ -3,7 +3,7 @@ const getHomePage = (req, res) => {
 };
 
 const getLandingPage = (req, res) => {
-  res.render('loading', {
+  res.render('landing', {
     title: 'Welcome To LIKE',
     data: 'Hello Landing Page'
   });

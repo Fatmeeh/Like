@@ -1,3 +1,15 @@
+const dataModel = require('../models');
+
+const getAnimalsData = dataModel.images.getCategoryImages(
+  'Animals',
+  console.log
+);
+const getCarsData = dataModel.images.getCategoryImages('Cars', console.log);
+const getFlowersData = dataModel.images.getCategoryImages(
+  'Flowers',
+  console.log
+);
+
 const getAnimals = (req, res) => {
   res.render('home', { title: 'LIKE | Flowers', data: 'Hello Animals' });
 };
