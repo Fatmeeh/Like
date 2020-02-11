@@ -2,9 +2,16 @@
 <h1>Select a Category</h1>
 <div class="categories">
     <ul>
-        <li><a href="">Cars</a></li>
-        <li><a href="">Flowers</a></li>
-        <li><a href="">Animals</a></li>
+        <li><a href="/cars">Cars</a></li>
+        <li><a href="/flowers">Flowers</a></li>
+        <li><a href="/animals">Animals</a></li>
     </ul>
 </div>
+
+{{#if data}}
+<h1>{{this.data}}</h1>
+{{/if}}
+ 
+<h1>{{users}}</h1>
+ 
 </div>
