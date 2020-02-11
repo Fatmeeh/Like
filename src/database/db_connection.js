@@ -8,7 +8,7 @@ if (process.env.NODE_ENV === "test") {
   DB_URL = process.env.TEST_DB_URL;
 }
 
-if (!DB_URL) throw new Error("Enviroment variable DATABASE_URL must be set");
+if (!DB_URL) throw new Error("Enviroment variable DB_URL must be set");
 
 const params = url.parse(DB_URL);
 const [username, password] = params.auth.split(":");
