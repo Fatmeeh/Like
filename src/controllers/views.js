@@ -1,5 +1,5 @@
 const getHomePage = (req, res) => {
-  res.render('home', { title: 'LIKE | HOME', data: 'Hello HOME PAGE' });
+  res.render("home", { title: "LIKE | HOME", data: "Hello HOME PAGE" });
 };
 
 const getLandingPage = (req, res) => {
@@ -10,7 +10,7 @@ const getLandingPage = (req, res) => {
 };
 
 const getLoginPage = (req, res) => {
-  res.render('login', { title: 'LIKE | LogIn', data: 'Hello Login' });
+  res.render("login", { title: "LIKE | LogIn", data: "Hello Login" });
 };
 
 module.exports = { getHomePage, getLandingPage, getLoginPage };
