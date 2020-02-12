@@ -1,6 +1,6 @@
 BEGIN;
 
-DROP TABLE IF EXISTS images,users;
+DROP TABLE IF EXISTS images,users,liked_pic;
 
 CREATE TABLE IF NOT EXISTS images (
     img_id SERIAL PRIMARY KEY,
@@ -59,12 +59,13 @@ VALUES
 
 CREATE TABLE IF NOT EXISTS liked_pic (
     like_id SERIAL PRIMARY KEY,
-    img_id VARCHAR(255) NOT NULL,
-    user_id VARCHAR(255) NOT NULL
+    img_id INTEGER REFERENCES images(img_id),
+    user_id INTEGER REFERENCES users(user_id)
 );
 
 
-
+INSERT INTO liked_pic(img_id,user_id) 
+values (2,1);
 
 
 
