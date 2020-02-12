@@ -16,7 +16,10 @@ const checkUser = (req, res) => {
     if (data.length) {
       res.redirect('/home');
     } else {
-      res.redirect('/login');
+      res.render('login', {
+        title: 'LIKE | Users',
+        error: 'Wrong Password or Username'
+      });
     }
   });
 };

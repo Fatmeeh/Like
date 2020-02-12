@@ -10,6 +10,10 @@ body {
   top: 1%;
 }
 
+ul {
+  list-style: none;
+}
+
 /* all page */
 
 .center {
@@ -79,6 +83,10 @@ body {
 .logIn {
   font-size: 35px;
 }
+
+span {
+  color: red;
+}
 /* home */
 
 .categories {
@@ -146,28 +154,26 @@ body {
   color: white;
 }
 
-
 /* user profile */
 
-.user-img{
+.user-img {
   width: 200px;
   height: 200px;
 }
 
-.img-Name{
+.img-Name {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
 }
-.user-info-container{
-  margin-left:  20px;
+.user-info-container {
+  margin-left: 20px;
   margin-top: 20px;
 }
-.favorit{
+.favorit {
   height: 70px;
- width: 100%; 
- margin-top: 10px;
- text-align: center;
-color:white;
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+  color: white;
   background-color: black;
 }
-
