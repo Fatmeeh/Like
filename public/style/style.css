@@ -3,7 +3,7 @@ body {
 }
 
 .logo {
-  height: 300px;
+  height: 200px;
   width: 400px;
   text-align: center;
   margin: 0;
@@ -23,9 +23,10 @@ body {
   height: 80px;
   width: 300px;
   margin: 0;
-  top: 50%;
+  top: 55%;
   background-color: black;
   font-size: 40px;
+  cursor: pointer;
 }
 
 /* landing page  */
@@ -38,24 +39,46 @@ body {
 /* landing page  */
 
 .ReadMore a {
-  flex-direction: column;
+  text-decoration: none;
+  color: #bf212f;
+  font-size: 23px;
 }
 
-/* login page */
-
-.form {
-  flex-direction: column;
-  flex-wrap: wrap;
-  font-size: 50px;
+.ReadMore a:hover {
+  text-decoration: none;
+  color: #bf212f;
+  font-size: 23px;
+  border-bottom: 2px solid #bf212f;
 }
-
 /* login page */
+.avatar img {
+  width: 100px;
+  height: 100px;
+}
+.login-form form {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 500px;
+  width: 35%;
+  border: 2px solid black;
+}
 
 .box_logIn {
-  margin-bottom: 20px;
-  font-size: 40px;
+  display: flex;
+  width: 100%;
+  font-size: 20px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid black;
+  padding-left: 10px;
+  margin-left: 10px;
 }
 
+.logIn {
+  font-size: 35px;
+}
 /* home */
 
 .categories {
@@ -122,3 +145,29 @@ body {
   background-color: red;
   color: white;
 }
+
+
+/* user profile */
+
+.user-img{
+  width: 200px;
+  height: 200px;
+}
+
+.img-Name{
+  display: flex;
+  flex-direction: row; 
+}
+.user-info-container{
+  margin-left:  20px;
+  margin-top: 20px;
+}
+.favorit{
+  height: 70px;
+ width: 100%; 
+ margin-top: 10px;
+ text-align: center;
+color:white;
+  background-color: black;
+}
+
