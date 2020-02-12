@@ -1,25 +1,24 @@
 const dataModel = require('../models');
 
-const getAnimalsData = dataModel.images.getCategoryImages(
-  'Animals',
-  console.log
-);
-const getCarsData = dataModel.images.getCategoryImages('Cars', console.log);
-const getFlowersData = dataModel.images.getCategoryImages(
-  'Flowers',
-  console.log
-);
-
 const getAnimals = (req, res) => {
-  res.render("home", { title: "LIKE | Flowers", data: "Hello Animals" });
+  dataModel.images.getCategoryImages('Animals', (err, data) => {
+    if (err) console.log(err);
+    res.render('home', { title: 'LIKE | Animals', data: data });
+  });
 };
 
 const getFlowers = (req, res) => {
-  res.render("home", { title: "LIKE | Flowers", data: "Hello Flowers" });
+  dataModel.images.getCategoryImages('flowers', (err, data) => {
+    if (err) console.log(err);
+    res.render('home', { title: 'LIKE | Flowers', data: data });
+  });
 };
 
 const getCars = (req, res) => {
-  res.render("home", { title: "LIKE | Flowers", data: "Hello Cars" });
+  dataModel.images.getCategoryImages('Cars', (err, data) => {
+    if (err) console.log(err);
+    res.render('home', { title: 'LIKE | Cars', data: data });
+  });
 };
 
 module.exports = {
