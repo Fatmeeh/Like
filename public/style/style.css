@@ -10,6 +10,10 @@ body {
   top: 1%;
 }
 
+ul {
+  list-style: none;
+}
+
 /* all page */
 
 .center {
@@ -81,6 +85,10 @@ body {
 
 .logIn {
   font-size: 35px;
+}
+
+span {
+  color: red;
 }
 
 /* home page  */

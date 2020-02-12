@@ -1,5 +1,5 @@
 <div class='center login-form'>
-    <form class="form" autocomplete="off" action="/check" method="POST">
+    <form class="form" autocomplete="off" action="/login" method="POST">
     <div class="avatar">
         <img src="images/login-avatar.png" alt="">
     </div>
@@ -13,6 +13,11 @@
   </div>
 
     <div>
+        {{#if error}}
+        <span class="center">
+            {{this.error}}
+        </span>
+        {{/if}}
     <button class="buttonLogIn buttonLogIn2" type="button1">
         <a>log in</a> </button>
     </div>
