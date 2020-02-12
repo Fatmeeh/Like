@@ -1,9 +1,9 @@
-const dataModel = require("../models");
+const dataModel = require('../models');
 
 const getUserProfilePage = (req, res) => {
   dataModel.users.getUserById(1, (err, data) => {
     if (err) console.log(err);
-    res.render("userProfile", { title: "LIKE | Animals", userData: data });
+    res.render('userProfile', { title: 'LIKE | Users', userData: data });
   });
 };
 const checkUser = (req, res) => {
@@ -11,16 +11,15 @@ const checkUser = (req, res) => {
   const password = req.body.user_pass;
   dataModel.users.getUserByNamePass(userName, password, (err, data) => {
     if (err) {
-      res.redirect("/login");
+      res.redirect('/login');
     }
-    if (data.user_id === null) {
-      res.redirect("/login");
+    if (data.length) {
+      res.redirect('/home');
     } else {
-      res.redirect("/home");
+      res.redirect('/login');
     }
   });
 };
-// res.render("login", { title: "LIKE | login", error: "UserName or password is not correct"});
 module.exports = {
   getUserProfilePage,
   checkUser
