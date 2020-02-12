@@ -3,9 +3,9 @@ const getHomePage = (req, res) => {
 };
 
 const getLandingPage = (req, res) => {
-  res.render('landing', {
-    title: 'Welcome To LIKE',
-    data: 'Hello Landing Page'
+  res.render("landing", {
+    title: "Welcome To LIKE",
+    data: "Hello Landing Page"
   });
 };
 

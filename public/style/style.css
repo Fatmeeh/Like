@@ -94,3 +94,35 @@ body {
   background-size: cover;
   background-position: center;
 }
+
+/* footer*/
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background-color: black;  
+    position: fixed;
+    bottom: 0;
+    right: 0%;
+    left: 0%;
+  }
+  
+  .navbar a {
+    display: block;
+    color: #f2f2f2;
+    padding: 16px 18px;
+    text-decoration: none;
+    font-size: 30px;
+  }
+  
+  .navbar a:hover {
+    background-color: white;
+    color: red;
+  }
+  
+  .navbar a.active {
+    background-color:red;
+    color: white;
+  }
+  
