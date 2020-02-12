@@ -26,6 +26,7 @@ body {
   top: 50%;
   background-color: black;
   font-size: 40px;
+  cursor: pointer;
 }
 
 /* landing page  */
@@ -38,24 +39,46 @@ body {
 /* landing page  */
 
 .ReadMore a {
-  flex-direction: column;
+  text-decoration: none;
+  color: #bf212f;
+  font-size: 23px;
 }
 
-/* login page */
-
-.form {
-  flex-direction: column;
-  flex-wrap: wrap;
-  font-size: 50px;
+.ReadMore a:hover {
+  text-decoration: none;
+  color: #bf212f;
+  font-size: 23px;
+  border-bottom: 2px solid #bf212f;
 }
-
 /* login page */
+.avatar img {
+  width: 100px;
+  height: 100px;
+}
+.login-form form {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 500px;
+  width: 35%;
+  border: 2px solid black;
+}
 
 .box_logIn {
-  margin-bottom: 20px;
-  font-size: 40px;
+  display: flex;
+  width: 100%;
+  font-size: 20px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid black;
+  padding-left: 10px;
+  margin-left: 10px;
 }
 
+.logIn {
+  font-size: 35px;
+}
 /* home */
 
 .categories {
@@ -68,12 +91,9 @@ body {
   text-decoration: none;
 }
 
-
-
 .container {
   flex-direction: column;
   flex-wrap: wrap;
-
 }
 
 .img-container ul {
@@ -98,31 +118,30 @@ body {
 /* footer*/
 
 .navbar {
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    background-color: black;  
-    position: fixed;
-    bottom: 0;
-    right: 0%;
-    left: 0%;
-  }
-  
-  .navbar a {
-    display: block;
-    color: #f2f2f2;
-    padding: 16px 18px;
-    text-decoration: none;
-    font-size: 30px;
-  }
-  
-  .navbar a:hover {
-    background-color: white;
-    color: red;
-  }
-  
-  .navbar a.active {
-    background-color:red;
-    color: white;
-  }
-  
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  right: 0%;
+  left: 0%;
+}
+
+.navbar a {
+  display: block;
+  color: #f2f2f2;
+  padding: 16px 18px;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.navbar a:hover {
+  background-color: white;
+  color: red;
+}
+
+.navbar a.active {
+  background-color: red;
+  color: white;
+}
