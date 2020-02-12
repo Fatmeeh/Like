@@ -2,9 +2,78 @@ body {
   font-size: 20px;
 }
 
-img {
+.logo {
   height: 300px;
   width: 400px;
+  text-align: center;
+  margin: 0;
+  top: 1%;
+}
+
+/* all page */
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+/* landing page  */
+
+.buttonLogIn {
+  height: 80px;
+  width: 300px;
+  margin: 0;
+  top: 50%;
+  background-color: black;
+  font-size: 40px;
+}
+
+/* landing page  */
+
+.buttonLogIn a {
+  color: aliceblue;
+  text-decoration: none;
+}
+
+/* landing page  */
+
+.ReadMore a {
+  flex-direction: column;
+}
+
+/* login page */
+
+.form {
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 50px;
+}
+
+/* login page */
+
+.box_logIn {
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+/* home */
+
+.categories {
+  background-color: black;
+}
+
+.categories a {
+  font-size: 50px;
+  color: aliceblue;
+  text-decoration: none;
+}
+
+
+
+.container {
+  flex-direction: column;
+  flex-wrap: wrap;
+
 }
 
 .img-container ul {
