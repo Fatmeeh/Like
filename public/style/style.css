@@ -50,11 +50,14 @@ body {
   font-size: 23px;
   border-bottom: 2px solid #bf212f;
 }
+
 /* login page */
+
 .avatar img {
   width: 100px;
   height: 100px;
 }
+
 .login-form form {
   display: flex;
   align-items: center;
@@ -79,10 +82,37 @@ body {
 .logIn {
   font-size: 35px;
 }
-/* home */
 
-.categories {
+/* home page  */
+.text{
+  text-align: center;
+}
+.Category {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
   background-color: black;
+  position: static;
+  left: 0;
+  right: 0;
+}
+
+.Category a {
+  display: block;
+  color: #f2f2f2;
+  padding: 16px 18px;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.Category a:hover {
+  background-color: black;
+  color: red;
+}
+
+.Category a.active {
+  background-color: red;
+  color: white;
 }
 
 .categories a {
@@ -113,6 +143,15 @@ body {
   width: 100%;
   background-size: cover;
   background-position: center;
+}
+
+.like-pic {
+  height: 70px;
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+  background-color: black;
 }
 
 /* footer*/
@@ -146,28 +185,28 @@ body {
   color: white;
 }
 
-
 /* user profile */
 
-.user-img{
+.user-img {
   width: 200px;
   height: 200px;
 }
 
-.img-Name{
+.img-Name {
   display: flex;
-  flex-direction: row; 
-}
-.user-info-container{
-  margin-left:  20px;
-  margin-top: 20px;
-}
-.favorit{
-  height: 70px;
- width: 100%; 
- margin-top: 10px;
- text-align: center;
-color:white;
-  background-color: black;
+  flex-direction: row;
 }
 
+.user-info-container {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.favorit {
+  height: 70px;
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+  background-color: black;
+}
