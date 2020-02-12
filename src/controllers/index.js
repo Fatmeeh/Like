@@ -12,5 +12,5 @@ router.get("/animals", images.getAnimals);
 router.get("/flowers", images.getFlowers);
 router.get("/cars", images.getCars);
 router.get("/profile", users.getUserProfilePage);
-
+router.post('/check',users.checkUser);
 module.exports = router;

@@ -1,5 +1,5 @@
 const getHomePage = (req, res) => {
-  res.render('home', { title: 'LIKE | HOME', data: 'Hello HOME PAGE' });
+  res.render('home', { title: 'LIKE | HOME',  });
 };
 
 const getLandingPage = (req, res) => {
