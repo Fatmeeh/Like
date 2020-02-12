@@ -18,18 +18,16 @@
 </svg>
 
 <section class="img-container">
-  {{!-- <div class="like-pic">
-    <h2>Like a picture</h2>
-  </div> --}}
-  <ul>
+
+  <ul id="images-list">
     {{#each data}}
     <li>
       <div class="image" style="background-image: url({{this.img_url}})"></div>
       <div class="image_info_container">
         <h2 class="image_info">{{this.img_info}}</h2>
         <h2 class="image_category">{{this.img_category}}</h2>
-        <svg class="image_fav-btn">
-          <use id="js-fav-btn" xlink:href="#icon-heart"></use>
+        <svg class="like__btn">
+          <use class="{{this.img_id}}" id="like-btn" xlink:href="#icon-heart"></use>
         </svg>
       </div>
     </li>
@@ -37,3 +35,30 @@
   </ul>
 </section>
 {{>footer}}
+<script>
+  console.log(location.search.split('id=')[1])
+  var user = {{id}}
+  console.log(user)
+  if (!user) {
+    window.location.pathname = '/login'
+  } else {
+    console.log(location.pathname)
+    if (location.pathname === '/login') {
+      window.history.pushState("", "", '/home');
+    }
+  }
+document.getElementById('images-list').addEventListener('click', e => {
+  if (e.target.matches('#like-btn')) {
+    e.target.classList.toggle('like__btn--selected');
+    axios.post('/liked', {
+    imgId: e.target.classList[0],
+    userId: user
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+  }
+});
+</script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+

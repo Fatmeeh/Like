@@ -1,9 +1,13 @@
 const dataModel = require('../models');
 
 const getUserProfilePage = (req, res) => {
-  dataModel.users.getUserById(1, (err, data) => {
+  dataModel.users.getUserById(1, (err, userData) => {
     if (err) console.log(err);
-    res.render('userProfile', { title: 'LIKE | Users', userData: data });
+    dataModel.liked_pic.getLiked(1, (err, data) => {
+      if (err) console.log(err);
+  
+    res.render('userProfile', { title: 'LIKE | Users', userData ,data});
+  });
   });
 };
 const checkUser = (req, res) => {
@@ -13,8 +17,11 @@ const checkUser = (req, res) => {
     if (err) {
       res.redirect('/login');
     }
+
     if (data.length) {
-      res.redirect('/home');
+      res.render('home', {
+        id: data[0].user_id
+      });
     } else {
       res.render('login', {
         title: 'LIKE | Users',
@@ -23,7 +30,24 @@ const checkUser = (req, res) => {
     }
   });
 };
+
+const likedImg = (req, res) => {
+  const img_id = req.body.imgId;
+  const user_id = req.body.userId;
+  dataModel.liked_pic.postLiked(img_id, user_id, (err, data) => {
+    if (err) {
+      res.redirect('/home');
+    } 
+    console.log(data)
+      res.render('home', {
+        id: 1
+      });
+       
+  });
+};
+
 module.exports = {
   getUserProfilePage,
-  checkUser
+  checkUser,
+  likedImg
 };

@@ -13,4 +13,5 @@ router.get('/flowers', images.getFlowers);
 router.get('/cars', images.getCars);
 router.get('/profile', users.getUserProfilePage);
 router.post('/login', users.checkUser);
+router.post('/liked', users.likedImg);
 module.exports = router;

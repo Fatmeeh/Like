@@ -218,3 +218,13 @@ span {
   color: white;
   background-color: black;
 }
+.like__btn{
+    fill: white;
+    stroke: black;
+    stroke-width: 1.5px;
+}
+.like__btn--selected{
+    fill: red;
+    stroke: red;
+    transition: all 0.2s;
+}
